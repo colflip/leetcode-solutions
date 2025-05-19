@@ -10,9 +10,6 @@ class LRUCache:
         self.capacity = capacity
         self.cache = {}
         self.order = []
-        
-
-        
 
     def get(self, key: int) -> int:
         
