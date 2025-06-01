@@ -1,3 +1,7 @@
+# 剑指 Offer 51. 数组中的逆序对
+# https://leetcode.cn/problems/shu-zu-zhong-de-ni-xu-dui-lcof/description/?envType=problem-list-v2&envId=G25w0aD1
+
+
 import bisect
 from typing import List
 

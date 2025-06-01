@@ -1,6 +1,8 @@
-# 剑指 Offer 30. 包含min函数的栈
-class CQueue:
+# 剑指 Offer 09. 用两个栈实现队列
+# https://leetcode.cn/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/description/?envType=problem-list-v2&envId=G25w0aD1
 
+
+class CQueue:
     def __init__(self):
         self.stack1 = []
         self.stack2 = []

@@ -1,4 +1,6 @@
 # 934. 最短的桥
+# https://leetcode.cn/problems/shortest-bridge/
+
 
 from collections import deque
 

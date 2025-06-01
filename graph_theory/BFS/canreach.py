@@ -17,7 +17,9 @@ class Solution:
                 continue
             if arr[index] == 0:
                 return True
-            queue.extend([(index + arr[index], step + 1), (index - arr[index], step + 1)])
+            queue.extend(
+                [(index + arr[index], step + 1), (index - arr[index], step + 1)]
+            )
         return False
 
 

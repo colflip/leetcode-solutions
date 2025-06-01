@@ -1,6 +1,5 @@
 # 剑指 Offer 42. 连续子数组的最大和
-
-
+#
 class Solution:
     def maxSubArray(self, nums) -> int:
         for i in range(1, len(nums)):

@@ -1,5 +1,5 @@
 # 剑指 Offer 26. 树的子结构
-
+# https://leetcode.cn/problems/shu-de-zi-jie-gou-lcof/description/?envType=problem-list-v2&envId=G25w0aD1
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, x):
@@ -7,11 +7,16 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
     def isSubStructure(self, A: TreeNode, B: TreeNode) -> bool:
         if not A or not B:
             return False
-        return self.recur(A, B) or self.isSubStructure(A.left, B) or self.isSubStructure(A.right, B)
+        return (
+            self.recur(A, B)
+            or self.isSubStructure(A.left, B)
+            or self.isSubStructure(A.right, B)
+        )
 
     def recur(self, A, B):
         if not B:

@@ -1,5 +1,6 @@
 # 226. 翻转二叉树
-# Definition for a binary tree node.
+# https://leetcode.cn/problems/invert-binary-tree/
+
 from typing import Optional
 
 
@@ -13,11 +14,14 @@ class TreeNode:
 class Solution:
     def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
         if root:
-            root.left, root.right = self.invertTree(root.right), self.invertTree(root.left)
+            root.left, root.right = (
+                self.invertTree(root.right),
+                self.invertTree(root.left),
+            )
         return root
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     root = TreeNode(4)
     root.left = TreeNode(2)
     root.right = TreeNode(7)

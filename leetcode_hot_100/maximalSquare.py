@@ -1,5 +1,8 @@
 # 221. 最大正方形
+# https://leetcode.cn/problems/maximal-square//description/?envType=problem-list-v2&envId=2cktkvj
+
 from typing import List
+
 
 class Solution:
     def maximalSquare(self, matrix: List[List[str]]) -> int:
@@ -10,7 +13,7 @@ class Solution:
         res = 0
         for i in range(m):
             for j in range(n):
-                if matrix[i][j] == '1':
+                if matrix[i][j] == "1":
                     if i == 0 or j == 0:
                         dp[i][j] = 1
                     else:

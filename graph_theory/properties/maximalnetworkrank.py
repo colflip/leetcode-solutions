@@ -1,4 +1,7 @@
 # 1615. 最大网络秩
+# https://leetcode.cn/problems/maximal-network-rank/
+
+
 from typing import List
 
 
@@ -11,4 +14,6 @@ class Solution:
             has[j][i] = 1
             cnts[i] += 1
             cnts[j] += 1
-        return max(cnts[i] + cnts[j] - has[i][j] for i in range(n) for j in range(i + 1, n))
+        return max(
+            cnts[i] + cnts[j] - has[i][j] for i in range(n) for j in range(i + 1, n)
+        )

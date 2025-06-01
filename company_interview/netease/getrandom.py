@@ -1,4 +1,6 @@
 # 382. 链表随机节点
+# https://leetcode-cn.com/problems/linked-list-random-node/
+
 from random import choice
 from typing import Optional
 

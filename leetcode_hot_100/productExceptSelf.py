@@ -1,4 +1,6 @@
 # 238. 除自身以外数组的乘积
+# https://leetcode.cn/problems/product-of-array-except-self//description/?envType=problem-list-v2&envId=2cktkvj
+
 from typing import List
 
 

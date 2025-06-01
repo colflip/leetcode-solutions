@@ -1,6 +1,7 @@
 # 剑指 Offer 25. 合并两个排序的链表
+# https://leetcode.cn/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/description/?envType=problem-list-v2&envId=G25w0aD1
 
-# Definition for singly-linked list.
+
 class ListNode:
     def __init__(self, x):
         self.val = x

@@ -1,8 +1,11 @@
 # 1129. 颜色交替的最短路径
+# https://leetcode.cn/problems/shortest-path-with-alternating-colors/
 
 
 class Solution:
-    def shortestAlternatingPaths(self, n: int, redEdges: List[List[int]], blueEdges: List[List[int]]) -> List[int]:
+    def shortestAlternatingPaths(
+        self, n: int, redEdges: List[List[int]], blueEdges: List[List[int]]
+    ) -> List[int]:
         dist = [1e9] * 2 * n
 
         graph = [[] for _ in range(2 * n)]

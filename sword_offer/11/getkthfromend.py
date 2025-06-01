@@ -1,6 +1,7 @@
 # 剑指 Offer 22. 链表中倒数第k个节点
+# https://leetcode.cn/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/description/?envType=problem-list-v2&envId=G25w0aD1
 
-# Definitionfor singly - linked list.
+
 class ListNode:
     def __init__(self, x):
         self.val = x

@@ -1,4 +1,7 @@
 # 剑指 Offer 31. 栈的压入、弹出序列
+# https://leetcode.cn/problems/zhan-de-ya-ru-dan-chu-xu-lie-lcof/description/?envType=problem-list-v2&envId=G25w0aD1
+
+
 from typing import List
 
 
@@ -10,8 +13,10 @@ class Solution:
         def find2(x):
             return pushed.index(popped[x])
 
-        if not pushed or not popped: return True
-        if popped == pushed[::-1]: return True
+        if not pushed or not popped:
+            return True
+        if popped == pushed[::-1]:
+            return True
         big1 = find1(-1)
         for i in range(big1, len(popped) - 1):
             if find2(i) < find2(i + 1):
@@ -25,7 +30,7 @@ class Solution:
             ori.remove(sett[q])
         for j in range(0, big1 - 1):
             if find2(j) > find2(j + 1):
-                if find2(j + 1) == ori[0:ori.index(find2(j))][-1]:
+                if find2(j + 1) == ori[0 : ori.index(find2(j))][-1]:
                     pass
                 else:
                     return False

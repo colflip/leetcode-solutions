@@ -1,5 +1,8 @@
-from typing import List
+# 350. 两个数组的交集 II
+# https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/
+
 from collections import Counter
+from typing import List
 
 
 class Solution:

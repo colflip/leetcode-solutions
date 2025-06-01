@@ -1,5 +1,8 @@
-class MyQueue:
+# 232. 用栈实现队列
+# https://leetcode.cn/problems/implement-queue-using-stacks/
 
+
+class MyQueue:
     def __init__(self):
         """
         in主要负责push，out主要负责pop

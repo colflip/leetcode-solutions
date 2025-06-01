@@ -1,4 +1,7 @@
 # 剑指 Offer 60. n个骰子的点数
+# https://leetcode.cn/problems/nge-tou-zi-de-dian-shu-lcof/description/?envType=problem-list-v2&envId=G25w0aD1
+
+
 from typing import List
 
 

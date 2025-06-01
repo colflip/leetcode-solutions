@@ -1,4 +1,6 @@
 # 208. 实现 Trie (前缀树)
+# https://leetcode.cn/problems/implement-trie-prefix-tree//description/?envType=problem-list-v2&envId=2cktkvj
+
 
 class Trie:
     def __init__(self):
@@ -8,7 +10,7 @@ class Trie:
     def insert(self, word: str) -> None:
         node = self
         for ch in word:
-            ch = ord(ch) - ord('a')
+            ch = ord(ch) - ord("a")
             if not node.children[ch]:
                 node.children[ch] = Trie()
             node = node.children[ch]
@@ -17,7 +19,7 @@ class Trie:
     def search(self, word: str) -> bool:
         node = self
         for ch in word:
-            ch = ord(ch) - ord('a')
+            ch = ord(ch) - ord("a")
             if not node.children[ch]:
                 return False
             node = node.children[ch]
@@ -26,7 +28,7 @@ class Trie:
     def startsWith(self, prefix: str) -> bool:
         node = self
         for ch in prefix:
-            ch = ord(ch) - ord('a')
+            ch = ord(ch) - ord("a")
             if not node.children[ch]:
                 return False
             node = node.children[ch]

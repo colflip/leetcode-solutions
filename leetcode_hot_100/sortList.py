@@ -1,11 +1,16 @@
 # 148. 排序链表
+# https://leetcode.cn/problems/sort-list//description/?envType=problem-list-v2&envId=2cktkvj
+
 from typing import Optional
+
 
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
+
+
 class Solution:
     def sortList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         if not head or not head.next:

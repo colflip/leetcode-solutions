@@ -1,22 +1,19 @@
 # 剑指 Offer 36. 二叉搜索树与双向链表
+# https://leetcode.cn/problems/er-cha-sou-suo-shu-yu-shuang-xiang-lian-biao-lcof/description/?envType=problem-list-v2&envId=G25w0aD1
 
-# Definition for a Node.
-# class Node:
-#     def __init__(self, val, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 
 class Solution:
-    def treeToDoublyList(self, root: 'Node') -> 'Node':
+    def treeToDoublyList(self, root: "Node") -> "Node":
         if not root:
             return root
         l = self.treeToDoublyList(root.left)
         r = self.treeToDoublyList(root.right)
         root.left, root.right = root, root
 
-        if l: root = self.concat(l, root)
-        if r: root = self.concat(root, r)
+        if l:
+            root = self.concat(l, root)
+        if r:
+            root = self.concat(root, r)
         return root
 
     def concat(self, l, r):

@@ -1,6 +1,7 @@
 # 145. 二叉树的后序遍历
-# Definition for a binary tree node.
-from typing import Optional, List
+# https://leetcode.cn/problems/binary-tree-postorder-traversal/
+
+from typing import List, Optional
 
 
 class TreeNode:
@@ -24,6 +25,7 @@ class Solution:
             res.append(root.val)
 
         dfs(root)
+
         return res
 
 

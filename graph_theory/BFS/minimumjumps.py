@@ -1,5 +1,6 @@
 # 1654. 到家的最少跳跃次数
 # https://leetcode-cn.com/problems/minimum-jumps-to-reach-home/
+
 from collections import deque
 from typing import List
 
@@ -20,14 +21,26 @@ class Solution:
             if index == x:
                 return times
             if pre_dir:
-                if (index + a) not in forbidden and (index + a) >= 0 and (index + a, 1) not in visited:
+                if (
+                    (index + a) not in forbidden
+                    and (index + a) >= 0
+                    and (index + a, 1) not in visited
+                ):
                     queue.append([index + a, 1, times + 1])
                     visited.add((index + a, 1))
-                if (index - b) not in forbidden and (index - b) >= 0 and (index - b, 0) not in visited:
+                if (
+                    (index - b) not in forbidden
+                    and (index - b) >= 0
+                    and (index - b, 0) not in visited
+                ):
                     queue.append([index - b, 0, times + 1])
                     visited.add((index - b, 0))
             else:
-                if (index + a) not in forbidden and (index + a) >= 0 and (index + a, 1) not in visited:
+                if (
+                    (index + a) not in forbidden
+                    and (index + a) >= 0
+                    and (index + a, 1) not in visited
+                ):
                     queue.append([index + a, 1, times + 1])
                     visited.add((index + a, 1))
         return -1

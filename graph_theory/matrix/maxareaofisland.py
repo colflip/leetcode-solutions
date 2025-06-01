@@ -1,4 +1,6 @@
 # 695. 岛屿的最大面积
+# https://leetcode.cn/problems/max-area-of-island/
+
 
 class Solution:
     def maxAreaOfIsland(self, grid) -> int:
@@ -10,7 +12,13 @@ class Solution:
             if row < 0 or colum < 0 or row == n or colum == m or grid[row][colum] != 1:
                 return 0
             grid[row][colum] = 0
-            return dfs(row + 1, colum) + dfs(row - 1, colum) + dfs(row, colum - 1) + dfs(row, colum + 1) + 1
+            return (
+                dfs(row + 1, colum)
+                + dfs(row - 1, colum)
+                + dfs(row, colum - 1)
+                + dfs(row, colum + 1)
+                + 1
+            )
 
         for i in range(n):
             for j in range(m):
@@ -19,8 +27,14 @@ class Solution:
         return res
 
 
-grid = [[0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
-        [0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0],
-        [0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0]]
+grid = [
+    [0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
+    [0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0],
+    [0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
+]
 print(Solution().maxAreaOfIsland(grid))

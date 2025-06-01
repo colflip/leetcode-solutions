@@ -1,14 +1,22 @@
+# 20. 有效的括号
+# https://leetcode.cn/problems/valid-parentheses/
+
+
 class Solution:
     def isValid(self, s: str) -> bool:
         stack = []
         for c in s:
-            if c in ('(', '[', '{'):
+            if c in ("(", "[", "{"):
                 stack.append(c)
             else:
                 if not stack:
                     return False
                 top = stack.pop()
-                if (top == '(' and c != ')') or (top == '[' and c != ']') or (top == '{' and c != '}'):
+                if (
+                    (top == "(" and c != ")")
+                    or (top == "[" and c != "]")
+                    or (top == "{" and c != "}")
+                ):
                     return False
         return not stack
 

@@ -1,14 +1,11 @@
 # 剑指 Offer 68 - II. 二叉树的最近公共祖先
+# https://leetcode.cn/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof/description/?envType=problem-list-v2&envId=G25w0aD1
 
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
 
 class Solution:
-    def lowestCommonAncestor(self, root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode:
+    def lowestCommonAncestor(
+        self, root: TreeNode, p: TreeNode, q: TreeNode
+    ) -> TreeNode:
         if root == None:
             return None
         if root == p or root == q:

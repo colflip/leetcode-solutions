@@ -1,4 +1,6 @@
 # 1091. 二进制矩阵中的最短路径
+# https://leetcode.cn/problems/shortest-path-in-binary-matrix/
+
 
 import collections
 
@@ -22,8 +24,16 @@ class Solution:
                 i, j = Q.popleft()
                 if i == l - 1 and j == l - 1:
                     return ans
-                for (x, y) in [(i - 1, j), (i + 1, j), (i, j + 1), (i, j - 1), (i + 1, j + 1), (i + 1, j - 1),
-                               (i - 1, j + 1), (i - 1, j - 1)]:
+                for x, y in [
+                    (i - 1, j),
+                    (i + 1, j),
+                    (i, j + 1),
+                    (i, j - 1),
+                    (i + 1, j + 1),
+                    (i + 1, j - 1),
+                    (i - 1, j + 1),
+                    (i - 1, j - 1),
+                ]:
                     if (x, y) not in visited and l > x >= 0 and l > y >= 0:
                         if grid[x][y] == 0:
                             visited.add((x, y))

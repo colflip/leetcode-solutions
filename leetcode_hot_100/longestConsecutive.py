@@ -1,4 +1,6 @@
 # 128. 最长连续序列
+# https://leetcode.cn/problems/longest-consecutive-sequence//description/?envType=problem-list-v2&envId=2cktkvj
+
 
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
@@ -13,4 +15,3 @@ class Solution:
                     cur_res += 1
                 res = max(res, cur_res)
         return res
-        

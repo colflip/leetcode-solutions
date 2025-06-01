@@ -1,4 +1,6 @@
-# 剑指 Offer 49. 丑数
+# 剑指 Offer 168. 丑数
+# https://leetcode.cn/problems/chou-shu-lcof/description/?envType=problem-list-v2&envId=G25w0aD1
+
 
 class Solution:
     def nthUglyNumber(self, n: int) -> int:

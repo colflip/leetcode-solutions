@@ -1,4 +1,6 @@
 # 1162. 地图分析
+# https://leetcode.cn/problems/as-far-from-land-as-possible/
+
 
 class Solution:
     def maxDistance(self, grid: List[List[int]]) -> int:

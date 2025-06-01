@@ -1,4 +1,6 @@
 # 剑指 Offer 11. 旋转数组的最小数字
+# https://leetcode.cn/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/description/?envType=problem-list-v2&envId=G25w0aD1
+
 
 class Solution:
     def minArray(self, numbers) -> int:

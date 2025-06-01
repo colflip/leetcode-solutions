@@ -1,4 +1,6 @@
 # 127. 单词接龙
+# https://leetcode-cn.com/problems/word-ladder/
+
 from typing import List
 
 
@@ -13,7 +15,7 @@ class Solution:
 
         head = {beginWord}
         tail = {endWord}
-        tmp = list('abcdefghijklmnopqrstuvwxyz')
+        tmp = list("abcdefghijklmnopqrstuvwxyz")
         res = 1
         while head:
             if len(head) > len(tail):
@@ -23,7 +25,7 @@ class Solution:
             for cur in head:
                 for i in range(l):
                     for j in tmp:
-                        word = cur[:i] + j + cur[i + 1:]
+                        word = cur[:i] + j + cur[i + 1 :]
 
                         if word in tail:
                             return res + 1

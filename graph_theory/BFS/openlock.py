@@ -1,4 +1,6 @@
 # 752. 打开转盘锁
+# https://leetcode.cn/problems/open-the-lock/
+
 from collections import deque
 from typing import List
 
@@ -19,7 +21,7 @@ class Solution:
             for i in range(4):
                 num = int(start[i])
                 for j in [1, -1]:
-                    yield start[:i] + str((num + j) % 10) + start[i + 1:]
+                    yield start[:i] + str((num + j) % 10) + start[i + 1 :]
 
         def update(s: deque, t: dict, u: dict) -> int:
             for _ in range(len(s)):
@@ -40,4 +42,5 @@ class Solution:
                 r = update(eq, ed, d)
             if r:
                 return r
+
         return -1

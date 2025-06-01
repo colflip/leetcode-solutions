@@ -1,6 +1,7 @@
-# 235. 二叉搜索树的最近公共祖先
+# 236. 二叉树的最近公共祖先
+# https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/
 
-# Definition for a binary tree node.
+
 class TreeNode:
     def __init__(self, x):
         self.val = x
@@ -9,7 +10,9 @@ class TreeNode:
 
 
 class Solution:
-    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+    def lowestCommonAncestor(
+        self, root: "TreeNode", p: "TreeNode", q: "TreeNode"
+    ) -> "TreeNode":
         if p.val > q.val:
             p, q = q, p
         while root:
@@ -31,4 +34,5 @@ if __name__ == "__main__":
     root.left.right.right = TreeNode(5)
     root.right.left = TreeNode(7)
     root.right.right = TreeNode(9)
+
     print(Solution().lowestCommonAncestor(root, root.left, root.left.right.right).val)

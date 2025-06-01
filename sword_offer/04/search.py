@@ -1,4 +1,6 @@
-# 剑指 Offer 3 - I. 在排序数组中查找数字 I
+# 剑指 Offer 53 - I. 在排序数组中查找数字 I
+# https://leetcode.cn/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof/description/?envType=problem-list-v2&envId=G25w0aD1
+
 
 class Solution:
     def search(self, nums: List[int], target: int) -> int:

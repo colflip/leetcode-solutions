@@ -1,4 +1,6 @@
 # 1319. 连通网络的操作次数
+# https://leetcode.cn/problems/number-of-operations-to-make-network-connected/
+
 
 class Solution:
     def makeConnected(self, n: int, connections: List[List[int]]) -> int:
@@ -21,4 +23,5 @@ class Solution:
             if i not in vist.keys():
                 dfs(i)
                 times += 1
+
         return -1 if len(connections) < n - 1 else times - 1

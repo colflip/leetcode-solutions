@@ -1,4 +1,6 @@
 # 802. 找到最终的安全状态
+# https://leetcode.cn/problems/find-eventual-safe-states/
+
 
 class Solution:
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
@@ -7,6 +9,7 @@ class Solution:
         for i in range(len(graph)):
             if nodes_status[i] == 0:
                 self.dfs(graph, i, nodes_status, safe_nodes)
+
         return sorted(safe_nodes)
 
     def dfs(self, graph, i, nodes_status, safe_nodes):
@@ -21,4 +24,5 @@ class Solution:
         if not flag:
             safe_nodes.append(i)
             nodes_status[i] = 2
+
         return flag

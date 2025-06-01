@@ -1,3 +1,6 @@
+# 566. 重塑矩阵
+# https://leetcode-cn.com/problems/reshape-the-matrix/
+
 from typing import List
 
 
@@ -17,11 +20,12 @@ class Solution:
         # 按照重塑矩阵的形状生成新的二维数组
         result = []
         for i in range(r):
-            result.append(arr[i * c: (i + 1) * c])
+            result.append(arr[i * c : (i + 1) * c])
 
         return result
 
-nums =[[1,2],[3,4]]
+
+nums = [[1, 2], [3, 4]]
 r = 2
 c = 4
-print(Solution().matrixReshape(nums,r,c))
+print(Solution().matrixReshape(nums, r, c))

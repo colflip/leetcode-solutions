@@ -1,4 +1,6 @@
 # 1545. 找出第 N 个二进制字符串中的第 K 位
+# https://leetcode-cn.com/problems/find-kth-bit-in-nth-binary-string/
+
 
 class Solution:
     def findKthBit(self, n: int, k: int) -> str:
@@ -10,13 +12,15 @@ class Solution:
 
         def process(n, k):
             if n == 1:
-                return '0'
+                return "0"
             mid = lens[n] // 2 + 1
             if k == mid:
                 return "1"
             elif k < mid:
                 return process(n - 1, k)
             else:
-                return '0' if process(n - 1, lens[n - 1] - (k - mid) + 1) == '1' else '1'
+                return (
+                    "0" if process(n - 1, lens[n - 1] - (k - mid) + 1) == "1" else "1"
+                )
 
         return process(n, k)

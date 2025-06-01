@@ -1,4 +1,6 @@
 # 152. 乘积最大子数组
+# https://leetcode.cn/problems/maximum-product-subarray//description/?envType=problem-list-v2&envId=2cktkvj
+
 
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
@@ -11,4 +13,3 @@ class Solution:
             min_val = min(nums[i], min_val * nums[i])
             res = max(res, max_val)
         return res
-    

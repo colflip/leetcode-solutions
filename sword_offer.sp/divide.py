@@ -1,7 +1,5 @@
-"""
-divide-two-integers
-https://leetcode-cn.com/problems/divide-two-integers/
-"""
+# 29. 两数相除
+# https://leetcode-cn.com/problems/divide-two-integers/description/?envType=problem-list-v2&envId=G25w0aD1
 
 
 class Solution:
@@ -22,7 +20,7 @@ class Solution:
             ret += cnt
             a -= val
         ret = -ret if flag else ret
-        return ret - 1 if ret >= 2 ** 31 else ret
+        return ret - 1 if ret >= 2**31 else ret
 
 
 if __name__ == "__main__":

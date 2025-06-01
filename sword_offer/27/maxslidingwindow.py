@@ -1,10 +1,14 @@
 # 剑指 Offer 59 - I. 滑动窗口的最大值
+# https://leetcode.cn/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof/description/?envType=problem-list-v2&envId=G25w0aD1
+
+
 from typing import List
 
 
 class Solution:
     def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
-        if not nums or k == 0: return []
+        if not nums or k == 0:
+            return []
         deque = collections.deque()
         # 未形成窗口
         for i in range(k):

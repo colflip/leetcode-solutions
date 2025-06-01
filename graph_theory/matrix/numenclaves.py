@@ -1,12 +1,16 @@
 # 1020. 飞地的数量
+# https://leetcode.cn/problems/number-of-enclaves/
+
 
 class Solution:
     def dfs(self, grid, i, j, visited):
         global res
         m, n = len(grid), len(grid[0])
-        if i < 0 or j < 0 or i > m - 1 or j > n - 1: return
+        if i < 0 or j < 0 or i > m - 1 or j > n - 1:
+            return
         direct = [[1, 0], [0, 1], [-1, 0], [0, -1]]
-        if visited[i][j] or grid[i][j] == 0: return
+        if visited[i][j] or grid[i][j] == 0:
+            return
         visited[i][j] = 1
         res += 1
         for dir_ in direct:

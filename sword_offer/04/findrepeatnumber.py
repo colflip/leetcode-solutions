@@ -1,10 +1,9 @@
 # 剑指 Offer 03. 数组中重复的数字
-# （1）排序 （2）map （3）桶计数 （4）位置重复
+# https://leetcode.cn/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/description/?envType=problem-list-v2&envId=G25w0aD1
 
 
 class Solution:
     def findRepeatNumber(self, nums: List[int]) -> int:
-
         dict = {}
         for i in nums:
             if i in dict:

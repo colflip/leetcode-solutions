@@ -1,5 +1,5 @@
 # 剑指 Offer 41. 数据流中的中位数
-
+# https://leetcode.cn/problems/shu-ju-liu-zhong-de-zhong-wei-shu-lcof/description/?envType=problem-list-v2&envId=G25w0aD1
 from heapq import *
 
 
@@ -15,5 +15,8 @@ class MedianFinder:
             heappush(self.sml_heap, -heappushpop(self.big_heap, num))
 
     def findMedian(self) -> float:
-        return -self.sml_heap[0] if len(self.big_heap) != len(self.sml_heap) else (self.big_heap[0] - self.sml_heap[
-            0]) / 2.0
+        return (
+            -self.sml_heap[0]
+            if len(self.big_heap) != len(self.sml_heap)
+            else (self.big_heap[0] - self.sml_heap[0]) / 2.0
+        )

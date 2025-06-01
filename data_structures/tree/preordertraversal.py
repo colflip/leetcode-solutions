@@ -1,5 +1,7 @@
 # 144. 二叉树的前序遍历
-from typing import Optional, List
+# https://leetcode.cn/problems/binary-tree-preorder-traversal/
+
+from typing import List, Optional
 
 
 # Definition for a binary tree node.
@@ -24,6 +26,7 @@ class Solution:
             dfs(root.right)
 
         dfs(root)
+
         return res
 
 

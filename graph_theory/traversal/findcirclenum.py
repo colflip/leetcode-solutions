@@ -1,4 +1,6 @@
 # 547. 省份数量
+# https://leetcode.cn/problems/number-of-provinces/
+
 
 class Solution:
     def findCircleNum(self, isConnected: List[List[int]]) -> int:
@@ -17,4 +19,5 @@ class Solution:
             count += 1
             if candidates:
                 peoples = [list(candidates)[0]]
+
         return count

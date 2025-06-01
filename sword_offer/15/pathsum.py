@@ -1,6 +1,7 @@
 # 剑指 Offer 34. 二叉树中和为某一值的路径
+# https://leetcode.cn/problems/er-cha-shu-zhong-he-wei-mou-yi-zhi-de-lu-jing-lcof/description/?envType=problem-list-v2&envId=G25w0aD1
 
-# Definition for a binary tree node.
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -10,7 +11,8 @@ class TreeNode:
 
 class Solution:
     def pathSum(self, root: TreeNode, target: int):
-        if not root: return []
+        if not root:
+            return []
         stack = [(root, [root.val])]
         res = []
         while stack:

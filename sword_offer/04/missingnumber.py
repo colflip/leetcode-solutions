@@ -1,4 +1,6 @@
 # 剑指 Offer 53 - II. 0～n-1中缺失的数字
+# https://leetcode.cn/problems/que-shi-de-shu-zi-lcof/description/?envType=problem-list-v2&envId=G25w0aD1
+
 
 class Solution:
     def missingNumber(self, nums) -> int:

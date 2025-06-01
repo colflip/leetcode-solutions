@@ -1,5 +1,6 @@
 # 112. 路径总和
-# Definition for a binary tree node.
+# https://leetcode.cn/problems/path-sum/
+
 from typing import Optional
 
 
@@ -16,10 +17,12 @@ class Solution:
             return False
         if not root.left and not root.right:
             return targetSum == root.val
-        return self.hasPathSum(root.left, targetSum - root.val) or self.hasPathSum(root.right, targetSum - root.val)
+        return self.hasPathSum(root.left, targetSum - root.val) or self.hasPathSum(
+            root.right, targetSum - root.val
+        )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     root = TreeNode(5)
     root.left = TreeNode(4)
     root.right = TreeNode(8)

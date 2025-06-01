@@ -1,4 +1,7 @@
-# 206. 反转链表 python
+# 206. 反转链表
+# https://leetcode.cn/problems/reverse-linked-list/
+
+
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         cur = head

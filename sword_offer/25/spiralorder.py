@@ -1,5 +1,7 @@
 # 剑指 Offer 29. 顺时针打印矩阵
-# https://leetcode-cn.com/problems/shun-shi-zhen-da-yin-ju-zhen-lcof/
+# https://leetcode-cn.com/problems/shun-shi-zhen-da-yin-ju-zhen-lcof/description/envType=study-plan&id=lcof&envId=G25w0aD1
+
+
 from typing import List
 
 
@@ -25,6 +27,6 @@ class Solution:
         return order
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
     print(Solution().spiralOrder(matrix))

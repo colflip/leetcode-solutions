@@ -1,6 +1,7 @@
 # 剑指 Offer 07. 重建二叉树
+# https://leetcode.cn/problems/zhong-jian-er-cha-shu-lcof/description/?envType=problem-list-v2&envId=G25w0aD1
 
-# Definition for a binary tree node.
+
 class TreeNode:
     def __init__(self, x):
         self.val = x
@@ -15,7 +16,7 @@ class Solution:
             root_index = inorder.index(root_val)
             root = TreeNode(inorder[root_index])
             root.left = self.buildTree(preorder, inorder[:root_index])
-            root.right = self.buildTree(preorder, inorder[root_index + 1:])
+            root.right = self.buildTree(preorder, inorder[root_index + 1 :])
             return root
 
 

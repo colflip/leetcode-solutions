@@ -1,4 +1,6 @@
 # 98. 验证二叉搜索树
+# https://leetcode.cn/problems/validate-binary-search-tree/
+
 from typing import Optional
 
 
@@ -17,9 +19,11 @@ class Solution:
                 return True
             if root.val <= lower or root.val >= upper:
                 return False
-            return helper(root.left, lower, root.val) and helper(root.right, root.val, upper)
+            return helper(root.left, lower, root.val) and helper(
+                root.right, root.val, upper
+            )
 
-        return helper(root, float('-inf'), float('inf'))
+        return helper(root, float("-inf"), float("inf"))
 
 
 if __name__ == "__main__":

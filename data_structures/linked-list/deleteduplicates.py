@@ -1,4 +1,7 @@
 # 83. 删除排序链表中的重复元素
+# https://leetcode.cn/problems/remove-duplicates-from-sorted-list/
+
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val

@@ -1,4 +1,6 @@
 # 841. 钥匙和房间
+# https://leetcode.cn/problems/keys-and-rooms/
+
 
 class Solution:
     def canVisitAllRooms(self, rooms: List[List[int]]) -> bool:
@@ -10,4 +12,5 @@ class Solution:
                 stk.extend(rooms[v])
                 rooms[v].clear()
             rooms[node].clear()
+
         return not any(rooms)

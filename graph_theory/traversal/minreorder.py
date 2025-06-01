@@ -1,4 +1,6 @@
 # 1466. 重新规划路线
+# https://leetcode.cn/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/
+
 
 class Solution:
     def minReorder(self, n: int, connections: List[List[int]]) -> int:
@@ -26,4 +28,5 @@ class Solution:
         for e in connections:
             p1[e[0]].append(e[1])
             p2[e[1]].append(e[0])
+
         return bfs()

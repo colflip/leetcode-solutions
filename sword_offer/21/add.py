@@ -1,4 +1,6 @@
 # 剑指 Offer 65. 不用加减乘除做加法
+# https://leetcode.cn/problems/bu-yong-jia-jian-cheng-chu-zuo-jia-fa-lcof/description/?envType=problem-list-v2&envId=G25w0aD1
+
 
 MASK1 = 4294967296  # 2^32
 MASK2 = 2147483648  # 2^31

@@ -1,7 +1,8 @@
 # 146. LRU Cache
+# https://leetcode.cn/problems/lru-cache//description/?envType=problem-list-v2&envId=2cktkvj
+
 
 class LRUCache:
-
     def __init__(self, capacity: int):
         """
         Initialize the LRUCache with a given capacity.
@@ -12,7 +13,6 @@ class LRUCache:
         self.order = []
 
     def get(self, key: int) -> int:
-        
         if key in self.cache:
             self.order.remove(key)
             self.order.append(key)
@@ -27,7 +27,6 @@ class LRUCache:
             del self.cache[oldest_key]
         self.cache[key] = value
         self.order.append(key)
-        
 
 
 # Your LRUCache object will be instantiated and called as such:

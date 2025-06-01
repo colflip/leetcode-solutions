@@ -1,5 +1,8 @@
 # 739. 每日温度
+# https://leetcode.cn/problems/daily-temperatures//description/?envType=problem-list-v2&envId=2cktkvj
+
 from typing import List
+
 
 class Solution:
     def dailyTemperatures(self, temperatures: List[int]) -> List[int]:

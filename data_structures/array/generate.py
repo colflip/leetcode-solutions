@@ -1,8 +1,10 @@
+# 118. 杨辉三角
+# https://leetcode-cn.com/problems/pascals-triangle/
+
 from typing import List
 
 
 class Solution:
-
     def generate(self, numRows: int) -> List[List[int]]:
         if numRows == 0:
             return []

@@ -1,7 +1,11 @@
 # 1376. 通知所有员工所需的时间
+# https://leetcode.cn/problems/time-needed-to-inform-all-employees/
+
 
 class Solution:
-    def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
+    def numOfMinutes(
+        self, n: int, headID: int, manager: List[int], informTime: List[int]
+    ) -> int:
         path, root = [[] for i in range(n)], -1
         for i in range(n):
             if manager[i] == -1:
@@ -16,4 +20,5 @@ class Solution:
                 ans = max(ans, a[1] + informTime[a[0]])
             for b in path[a[0]]:
                 lis.append([b, a[1] + informTime[a[0]]])
+
         return ans

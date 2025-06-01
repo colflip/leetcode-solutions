@@ -1,11 +1,6 @@
 # 剑指 Offer 55 - II. 平衡二叉树
+# https://leetcode.cn/problems/ping-heng-er-cha-shu-lcof/description/?envType=problem-list-v2&envId=G25w0aD1
 
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
 
 class Solution:
     def isBalanced(self, root: TreeNode) -> bool:

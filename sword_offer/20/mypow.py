@@ -1,4 +1,6 @@
 # 剑指 Offer 16. 数值的整数次方
+# https://leetcode.cn/problems/shu-zhi-de-zheng-shu-ci-fang-lcof/description/?envType=problem-list-v2&envId=G25w0aD1
+
 
 class Solution:
     def myPow(self, x: float, n: int) -> float:

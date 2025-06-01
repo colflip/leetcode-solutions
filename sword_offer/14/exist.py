@@ -1,4 +1,6 @@
 # 剑指 Offer 12. 矩阵中的路径
+# https://leetcode.cn/problems/ju-zhen-zhong-de-lu-jing-lcof/description/?envType=problem-list-v2&envId=G25w0aD1
+
 
 class Solution:
     def exist(self, board, word: str) -> bool:
@@ -9,9 +11,13 @@ class Solution:
                 return False
             if k == len(word) - 1:
                 return True
-            board[i][j] = ''
-            res = dfs(board, i - 1, j, word, k + 1) or dfs(board, i, j - 1, word, k + 1) \
-                  or dfs(board, i + 1, j, word, k + 1) or dfs(board, i, j + 1, word, k + 1)
+            board[i][j] = ""
+            res = (
+                dfs(board, i - 1, j, word, k + 1)
+                or dfs(board, i, j - 1, word, k + 1)
+                or dfs(board, i + 1, j, word, k + 1)
+                or dfs(board, i, j + 1, word, k + 1)
+            )
             board[i][j] = word[k]
             return res
 

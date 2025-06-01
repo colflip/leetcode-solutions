@@ -1,4 +1,6 @@
 # 面试题13. 机器人的运动范围
+# https://leetcode.cn/problems/ji-qi-ren-de-yun-dong-fan-wei-lcof/description/?envType=problem-list-v2&envId=G25w0aD1
+
 
 class Solution:
     def movingCount(self, m: int, n: int, k: int) -> int:
@@ -7,6 +9,7 @@ class Solution:
             for s in str(num):
                 cnt += int(s)
             return cnt
+
         visit_cnt = set()
         queue = deque([(0, 0)])
         while queue:

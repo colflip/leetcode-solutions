@@ -1,18 +1,13 @@
 # 剑指 Offer 32 - III. 从上到下打印二叉树 III
+# https://leetcode.cn/problems/cong-shang-dao-xia-da-yin-er-cha-shu-iii-lcof/description/?envType=problem-list-v2&envId=G25w0aD1
+
 import collections
-
-
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
 
 
 class Solution:
     def levelOrder(self, root: TreeNode) -> List[List[int]]:
-        if not root: return []
+        if not root:
+            return []
         res, deque = [], collections.deque([root])
         while deque:
             temp = collections.deque()
@@ -22,7 +17,9 @@ class Solution:
                     temp.appendleft(node.val)
                 else:
                     temp.append(node.val)
-                if node.left: deque.append(node.left)
-                if node.right: deque.append(node.right)
+                if node.left:
+                    deque.append(node.left)
+                if node.right:
+                    deque.append(node.right)
             res.append(list(temp))
         return res

@@ -1,5 +1,5 @@
 # 剑指 Offer 32 - I. 从上到下打印二叉树
-# 层序遍历
+# https://leetcode.cn/problems/cong-shang-dao-xia-da-yin-er-cha-shu-lcof/description/?envType=problem-list-v2&envId=G25w0aD1
 
 # Definition for a binary tree node.
 # class TreeNode:
@@ -8,6 +8,7 @@
 #         self.left = None
 #         self.right = None
 #
+
 
 class Solution:
     def levelOrder(self, root):
@@ -21,5 +22,3 @@ class Solution:
 
             temp.pop(0)
         return ans
-
-

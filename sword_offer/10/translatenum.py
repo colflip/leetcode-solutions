@@ -1,5 +1,5 @@
 # 剑指 Offer 46. 把数字翻译成字符串
-
+# https://leetcode.cn/problems/ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof/description/?envType=problem-list-v2&envId=G25w0aD1
 class Solution:
     def translateNum(self, num: int) -> int:
         if num < 10:
@@ -10,7 +10,7 @@ class Solution:
         dp[1] = 2 if 9 < nums[:2] < 26 else 1
 
         for i in range(2, len(nums)):
-            dp[i] = dp[i - 1] + dp[i - 2] if 9 < num[i - 1:i + 1] < 26 else dp[i - 1]
+            dp[i] = dp[i - 1] + dp[i - 2] if 9 < num[i - 1 : i + 1] < 26 else dp[i - 1]
         return dp[-1]
 
 

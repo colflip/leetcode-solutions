@@ -1,4 +1,6 @@
 # 847. 访问所有节点的最短路径
+# https://leetcode.cn/problems/shortest-path-visiting-all-nodes/
+
 from collections import deque
 
 
@@ -16,6 +18,7 @@ class Solution:
                 if (next_index, next_status) not in visited:
                     queue.append((next_index, next_status, path + 1))
                     visited.add((next_index, next_status))
+
         return -1
 
 
